@@ -12,7 +12,8 @@ module.exports = {
 	},
 	plugins: ['react', 'prettier'],
 	rules: {
-		'prettier/prettier': 'error',
+		'prettier/prettier': ['error', { endOfLine: 'auto' }],
 		'react/jsx-filename-extension': ['warn', { extensions: ['js', 'jsx'] }],
+		'react/jsx-props-no-spreading': 'off',
 	},
 };
