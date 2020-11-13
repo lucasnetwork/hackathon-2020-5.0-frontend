@@ -10,3 +10,9 @@ export default styled.View`
 export const Image = styled.Image`
 	margin-bottom: 62px;
 `;
+
+export const Background = styled.Image`
+	position: absolute;
+	top: 0;
+	right: 0;
+`;
