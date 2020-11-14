@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import ButtonGoBack from '../ButtonGoBack';
 import background from '../../images/background.png';
-import { Background } from './styles';
+import Container, { Background } from './styles';
 
 const HeaderLogin = () => {
 	const navigate = useNavigation();
@@ -12,7 +12,9 @@ const HeaderLogin = () => {
 	}
 	return (
 		<>
-			<ButtonGoBack handlePress={goToHomePage} />
+			<Container>
+				<ButtonGoBack handlePress={goToHomePage} />
+			</Container>
 			<Background source={background} />
 		</>
 	);

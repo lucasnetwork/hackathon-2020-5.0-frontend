@@ -1,6 +1,13 @@
 import styled from 'styled-components/native';
 
-// eslint-disable-next-line import/prefer-default-export
+import Constants from 'expo-constants';
+
+export default styled.View`
+	margin-top: ${`${Constants.statusBarHeight + 16}px`};
+	margin-left: 16px;
+	margin-right: 16px;
+`;
+
 export const Background = styled.Image`
 	position: absolute;
 	top: 0;
