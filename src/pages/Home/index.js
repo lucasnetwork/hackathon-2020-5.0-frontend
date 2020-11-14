@@ -12,6 +12,11 @@ const Home = () => {
 	function goToLoginPage() {
 		navigate.navigate('Login');
 	}
+
+	function goToRegisterPage() {
+		navigate.navigate('Register');
+	}
+
 	return (
 		<Container>
 			<Background source={background} />
@@ -21,7 +26,12 @@ const Home = () => {
 				activeOpacity={0.6}
 				text="Já tenho conta"
 			/>
-			<Button secondary text="Sou novo" />
+			<Button
+				onPress={goToRegisterPage}
+				activeOpacity={0.6}
+				secondary
+				text="Sou novo"
+			/>
 		</Container>
 	);
 };
