@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import HeaderLogin from './components/HeaderLogin';
 import Register from './pages/Register';
+import QuickAcess from './pages/QuickAcess';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,11 @@ const Routes = () => (
 			<Stack.Screen
 				name="Register"
 				component={Register}
+				options={{ header: (props) => <HeaderLogin {...props} /> }}
+			/>
+			<Stack.Screen
+				name="QuickAcess"
+				component={QuickAcess}
 				options={{ header: (props) => <HeaderLogin {...props} /> }}
 			/>
 		</Stack.Navigator>

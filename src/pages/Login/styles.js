@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import Contants from 'expo-constants';
 
 export default styled.View`
 	flex: 1;
@@ -24,12 +23,6 @@ export const SubTitle = styled.Text`
 	color: #582a2a;
 
 	opacity: 0.5;
-`;
-
-export const Background = styled.Image`
-	position: absolute;
-	top: 0;
-	right: 0;
 `;
 
 export const ContainerInputs = styled.View`
@@ -61,17 +54,4 @@ export const ReceiverPassText = styled.Text`
 	font-size: 14px;
 	font-weight: bold;
 	color: #0098d1;
-`;
-
-export const ButtonGoBack = styled.TouchableOpacity`
-	width: 40px;
-	height: 40px;
-	position: absolute;
-	border-radius: 50px;
-	background: #ffffff;
-	box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.06);
-	top: ${`${Contants.statusBarHeight + 12}px`};
-	left: 16px;
-	align-items: center;
-	justify-content: center;
 `;

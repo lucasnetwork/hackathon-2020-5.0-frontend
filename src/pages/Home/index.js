@@ -16,6 +16,9 @@ const Home = () => {
 	function goToRegisterPage() {
 		navigate.navigate('Register');
 	}
+	function goToQuickAcessPage() {
+		navigate.navigate('QuickAcess');
+	}
 
 	return (
 		<Container>
@@ -31,6 +34,12 @@ const Home = () => {
 				activeOpacity={0.6}
 				secondary
 				text="Sou novo"
+			/>
+			<Button
+				onPress={goToQuickAcessPage}
+				activeOpacity={0.6}
+				tertiary
+				text="2ª Via do Boleto"
 			/>
 		</Container>
 	);
