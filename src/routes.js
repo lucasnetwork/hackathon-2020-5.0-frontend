@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from './pages/Home';
+import PreLogin from './pages/PreLogin';
 import Login from './pages/Login';
 import HeaderLogin from './components/HeaderLogin';
 import Register from './pages/Register';
@@ -11,10 +11,10 @@ const Stack = createStackNavigator();
 
 const Routes = () => (
 	<NavigationContainer>
-		<Stack.Navigator initialRouteName="Home">
+		<Stack.Navigator initialRouteName="PreLogin">
 			<Stack.Screen
-				name="Home"
-				component={Home}
+				name="PreLogin"
+				component={PreLogin}
 				options={{
 					headerShown: false,
 				}}

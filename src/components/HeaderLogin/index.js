@@ -8,7 +8,7 @@ const HeaderLogin = () => {
 	const navigate = useNavigation();
 
 	function goToHomePage() {
-		navigate.navigate('Home');
+		navigate.navigate('PreLogin');
 	}
 	return (
 		<>
