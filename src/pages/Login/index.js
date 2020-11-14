@@ -7,7 +7,6 @@ import Container, {
 	TitleContainer,
 	Title,
 	SubTitle,
-	Background,
 	ContainerInputs,
 	ContainerButton,
 	LabelTextReceiverPass,
@@ -15,22 +14,15 @@ import Container, {
 	ButtonReceiverPass,
 	ReceiverPassText,
 } from './styles';
-import ButtonGoBack from '../../components/ButtonGoBack';
+
 import logoImage from '../../images/logo.png';
-import background from '../../images/background.png';
 import InputText from '../../components/InputText';
 
 const Login = () => {
 	const navigate = useNavigation();
 
-	function goToHomePage() {
-		navigate.navigate('Home');
-	}
-
 	return (
 		<Container>
-			<ButtonGoBack handlePress={goToHomePage} />
-			<Background source={background} />
 			<View>
 				<Image source={logoImage} />
 				<TitleContainer>
