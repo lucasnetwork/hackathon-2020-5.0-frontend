@@ -1,12 +1,18 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 import Container, { Title, TitleButton, SubTitleButton } from './styles';
 import ButtonCard from '../../components/ButtonCard';
 
 const QuickAcess = () => {
+	const navigate = useNavigation();
+
+	function goToBoleto() {
+		navigate.navigate('Boleto');
+	}
 	return (
 		<Container>
 			<Title>Acesso rápido</Title>
-			<ButtonCard>
+			<ButtonCard onPress={goToBoleto}>
 				<TitleButton>2ª via do Boleto</TitleButton>
 				<SubTitleButton>Acesse já a segunda via do seu boleto.</SubTitleButton>
 			</ButtonCard>

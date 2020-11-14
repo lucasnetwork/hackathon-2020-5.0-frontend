@@ -6,6 +6,8 @@ import Login from './pages/Login';
 import HeaderLogin from './components/HeaderLogin';
 import Register from './pages/Register';
 import QuickAcess from './pages/QuickAcess';
+import Boleto from './pages/Boleto';
+import Header from './components/Header';
 
 const Stack = createStackNavigator();
 
@@ -32,7 +34,12 @@ const Routes = () => (
 			<Stack.Screen
 				name="QuickAcess"
 				component={QuickAcess}
-				options={{ header: (props) => <HeaderLogin {...props} /> }}
+				options={{ header: (props) => <Header {...props} /> }}
+			/>
+			<Stack.Screen
+				name="Boleto"
+				component={Boleto}
+				options={{ header: (props) => <Header {...props} /> }}
 			/>
 		</Stack.Navigator>
 	</NavigationContainer>
