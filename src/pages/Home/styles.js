@@ -5,6 +5,7 @@ export default styled.View`
 	align-items: center;
 	justify-content: center;
 	padding: 16px;
+	margin-bottom: 100px;
 `;
 
 export const Image = styled.Image`
