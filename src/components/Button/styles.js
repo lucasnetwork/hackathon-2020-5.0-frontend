@@ -15,6 +15,11 @@ export default styled.TouchableOpacity`
 			background: #f5f5f5;
 			border: 1px solid rgba(70, 70, 70, 0.1);
 		`}
+	${({ tertiary }) =>
+		tertiary &&
+		css`
+			background: #e32119;
+		`}
 `;
 
 export const TextButton = styled.Text`
