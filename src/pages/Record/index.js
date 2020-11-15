@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesome } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
+import { useNavigation } from '@react-navigation/native';
 import Container, {
 	ButtonContainer,
 	TitleContainer,
@@ -11,10 +12,15 @@ import Container, {
 import ButtonGoBack from '../../components/ButtonGoBack';
 
 const Record = () => {
+	const navigate = useNavigation();
+
+	function goBack() {
+		navigate.goBack();
+	}
 	return (
 		<Container>
 			<ButtonContainer>
-				<ButtonGoBack />
+				<ButtonGoBack handlePress={goBack} />
 			</ButtonContainer>
 			<TitleContainer>
 				<Title>Gravando...</Title>

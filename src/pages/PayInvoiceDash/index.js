@@ -6,6 +6,7 @@ import {
 	Ionicons,
 } from '@expo/vector-icons';
 
+import { useNavigation } from '@react-navigation/native';
 import mastercardeImage from '../../images/mastercardImage/mastercardImage.png';
 import Container, {
 	Header,
@@ -29,11 +30,15 @@ import Card from '../../components/Card';
 import Button from '../../components/Button';
 
 const PayInvoiceDash = () => {
+	const navigate = useNavigation();
+	function goBack() {
+		navigate.goBack();
+	}
 	return (
 		<Container>
 			<Header>
 				<ViewButton>
-					<ButtonGoBack />
+					<ButtonGoBack handlePress={goBack} />
 				</ViewButton>
 				<ContainerHeaderValues>
 					<HeaderTitle>Fatura atual</HeaderTitle>
