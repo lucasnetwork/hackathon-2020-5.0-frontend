@@ -63,22 +63,6 @@ const Home = () => {
 						</ScrollView>
 					</ContainerGroup>
 					<ContainerGroup>
-						<TitleClub>CPFL Clube</TitleClub>
-						<Card onPress={goToCpflClub}>
-							<Image source={giftBoxImage} />
-							<View>
-								<TextCard small>Saldo total</TextCard>
-								<TextCard tertiary>450 pontos</TextCard>
-							</View>
-							<Ionicons
-								name="md-arrow-round-forward"
-								size={30}
-								color="#3F3F3F"
-							/>
-						</Card>
-					</ContainerGroup>
-
-					<ContainerGroup>
 						<TitleClub>Nossos Serviços</TitleClub>
 						<View
 							style={{ flexDirection: 'row', justifyContent: 'space-between' }}
@@ -100,6 +84,21 @@ const Home = () => {
 								<TextService>Religar energia</TextService>
 							</ButtonCard>
 						</View>
+					</ContainerGroup>
+					<ContainerGroup>
+						<TitleClub>CPFL Clube</TitleClub>
+						<Card onPress={goToCpflClub}>
+							<Image source={giftBoxImage} />
+							<View>
+								<TextCard small>Saldo total</TextCard>
+								<TextCard tertiary>450 pontos</TextCard>
+							</View>
+							<Ionicons
+								name="md-arrow-round-forward"
+								size={30}
+								color="#3F3F3F"
+							/>
+						</Card>
 					</ContainerGroup>
 					<ContainerGroup>
 						<TitleClub>Ganhe pontos</TitleClub>

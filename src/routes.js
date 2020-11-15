@@ -17,6 +17,7 @@ import Emergency from './pages/Emergency';
 import Alerts from './pages/Alerts';
 import CpflClub from './pages/CpflClub';
 import Record from './pages/Record';
+import PayInvoiceOptions from './pages/PayInvoiceOptions';
 
 const Stack = createStackNavigator();
 
@@ -94,6 +95,11 @@ const Routes = () => (
 				name="Record"
 				component={Record}
 				options={{ headerShown: false }}
+			/>
+			<Stack.Screen
+				name="PayInvoiceOptions"
+				component={PayInvoiceOptions}
+				options={{ header: (props) => <Header {...props} /> }}
 			/>
 		</Stack.Navigator>
 	</NavigationContainer>

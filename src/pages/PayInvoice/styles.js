@@ -9,7 +9,7 @@ export default styled.View`
 
 export const ContainerTitle = styled.View`
 	align-self: flex-start;
-	margin-bottom: 78px;
+	margin-bottom: 36px;
 `;
 
 export const ContainerButtons = styled.View`
@@ -19,10 +19,7 @@ export const ContainerButtons = styled.View`
 	margin-top: 40px;
 `;
 
-export const TextOr = styled.Text`
-	margin-top: 0px;
-	margin-bottom: 25px;
-	color: #582a2a;
-	font-size: 20px;
-	opacity: 0.5;
+export const ContainerInputs = styled.View`
+	width: 100%;
+	margin-bottom: 36px;
 `;

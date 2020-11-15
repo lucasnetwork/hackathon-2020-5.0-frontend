@@ -16,3 +16,18 @@ export const ContainerInput = styled.View`
 	width: 100%;
 	margin: 42px 0;
 `;
+
+export const MessageContainer = styled.View`
+	border-color: #464646;
+	border-bottom-width: 1px;
+`;
+
+export const Text = styled.Text`
+	font-size: 16px;
+	color: #464646;
+`;
+
+export const LinkText = styled.Text`
+	font-size: 16px;
+	color: #0098d1;
+`;
