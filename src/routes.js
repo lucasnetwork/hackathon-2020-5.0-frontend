@@ -13,6 +13,7 @@ import ChatBot from './pages/ChatBot';
 import PayInvoice from './pages/PayInvoice';
 import IndicateFriend from './pages/IndicateFriend';
 import PayInvoiceDash from './pages/PayInvoiceDash';
+import Emergency from './pages/Emergency';
 
 const Stack = createStackNavigator();
 
@@ -70,6 +71,11 @@ const Routes = () => (
 				name="PayInvoiceDash"
 				component={PayInvoiceDash}
 				options={{ headerShown: false }}
+			/>
+			<Stack.Screen
+				name="Emergency"
+				component={Emergency}
+				options={{ header: (props) => <Header {...props} /> }}
 			/>
 		</Stack.Navigator>
 	</NavigationContainer>

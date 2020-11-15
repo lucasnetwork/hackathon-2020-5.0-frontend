@@ -13,6 +13,10 @@ const QuickAcess = () => {
 	function goToPayInvoice() {
 		navigate.navigate('PayInvoice');
 	}
+
+	function goToEmergency() {
+		navigate.navigate('Emergency');
+	}
 	return (
 		<Container>
 			<Title>Acesso rápido</Title>
@@ -26,7 +30,7 @@ const QuickAcess = () => {
 					Maior facilidade de pagar sua conta de energia.
 				</SubTitleButton>
 			</ButtonCard>
-			<ButtonCard tertiary>
+			<ButtonCard tertiary onPress={goToEmergency}>
 				<TitleButton>Emergência</TitleButton>
 				<SubTitleButton>Nos informe sua emergência.</SubTitleButton>
 			</ButtonCard>
