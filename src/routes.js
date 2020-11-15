@@ -10,6 +10,7 @@ import Boleto from './pages/Boleto';
 import Header from './components/Header';
 import Home from './pages/Home';
 import ChatBot from './pages/ChatBot';
+import PayInvoice from './pages/PayInvoice';
 
 const Stack = createStackNavigator();
 
@@ -51,6 +52,11 @@ const Routes = () => (
 			<Stack.Screen
 				name="ChatBot"
 				component={ChatBot}
+				options={{ header: (props) => <Header {...props} /> }}
+			/>
+			<Stack.Screen
+				name="PayInvoice"
+				component={PayInvoice}
 				options={{ header: (props) => <Header {...props} /> }}
 			/>
 		</Stack.Navigator>
