@@ -21,6 +21,10 @@ import InputText from '../../components/InputText';
 const Login = () => {
 	const navigate = useNavigation();
 
+	function goToHome() {
+		navigate.navigate('Home');
+	}
+
 	return (
 		<Container>
 			<View>
@@ -43,7 +47,7 @@ const Login = () => {
 						<ReceiverPassText>clique aqui</ReceiverPassText>
 					</ButtonReceiverPass>
 				</ContainerTextReceiverPass>
-				<Button text="Entrar" />
+				<Button text="Entrar" onPress={goToHome} />
 			</ContainerButton>
 		</Container>
 	);
