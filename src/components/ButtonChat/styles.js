@@ -11,4 +11,5 @@ export default styled.TouchableOpacity`
 	align-self: flex-end;
 	align-items: center;
 	justify-content: center;
+	z-index: 10;
 `;
