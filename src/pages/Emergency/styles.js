@@ -12,7 +12,7 @@ export const ContainerTitle = styled.View`
 	justify-content: center;
 `;
 
-export const ImageIcon = styled.View`
+export const ImageIcon = styled.TouchableOpacity`
 	border: 2px;
 	width: 139px;
 	height: 139px;

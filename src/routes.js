@@ -16,6 +16,7 @@ import PayInvoiceDash from './pages/PayInvoiceDash';
 import Emergency from './pages/Emergency';
 import Alerts from './pages/Alerts';
 import CpflClub from './pages/CpflClub';
+import Record from './pages/Record';
 
 const Stack = createStackNavigator();
 
@@ -88,6 +89,11 @@ const Routes = () => (
 				name="CpflClub"
 				component={CpflClub}
 				options={{ header: (props) => <Header {...props} /> }}
+			/>
+			<Stack.Screen
+				name="Record"
+				component={Record}
+				options={{ headerShown: false }}
 			/>
 		</Stack.Navigator>
 	</NavigationContainer>

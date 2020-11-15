@@ -14,6 +14,9 @@ const Emergency = () => {
 		navigate.navigate('Alerts');
 	}
 
+	function goToRecord() {
+		navigate.navigate('Record');
+	}
 	return (
 		<Container>
 			<ContainerTitle>
@@ -24,7 +27,7 @@ const Emergency = () => {
 			</ContainerTitle>
 			<View style={{ flexDirection: 'row', alignItems: 'center' }}>
 				<AntDesign name="arrowright" size={24} color="#CD2A00" />
-				<ImageIcon>
+				<ImageIcon onPress={goToRecord}>
 					<Image source={warning} />
 				</ImageIcon>
 				<AntDesign name="arrowleft" size={24} color="#CD2A00" />
