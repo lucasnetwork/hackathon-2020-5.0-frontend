@@ -6,3 +6,38 @@ export default styled.View`
 	align-items: center;
 	justify-content: center;
 `;
+
+export const TitleContainer = styled.View`
+	margin-top: 14px;
+`;
+
+export const ContainerInputs = styled.View`
+	width: 100%;
+`;
+
+export const ContainerButton = styled.View`
+	margin-top: 40px;
+	width: 100%;
+`;
+
+export const ContainerTextReceiverPass = styled.View`
+	width: 100%;
+	flex-direction: row;
+	margin-bottom: 20px;
+`;
+
+export const LabelTextReceiverPass = styled.Text`
+	font-size: 14px;
+	color: #464646;
+	opacity: 0.5;
+`;
+
+export const ButtonReceiverPass = styled.TouchableOpacity`
+	margin-left: 8px;
+`;
+
+export const ReceiverPassText = styled.Text`
+	font-size: 14px;
+	font-weight: bold;
+	color: #0098d1;
+`;

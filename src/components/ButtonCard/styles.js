@@ -9,6 +9,8 @@ export default styled.TouchableOpacity`
 	margin-bottom: 16px;
 	justify-content: center;
 	padding: 16px;
+	position: relative;
+	overflow: hidden;
 	${({ secondary }) =>
 		secondary &&
 		css`
@@ -19,4 +21,21 @@ export default styled.TouchableOpacity`
 		css`
 			background: #e32119;
 		`}
+	${({ fourth }) =>
+		fourth &&
+		css`
+			background: #83b81a;
+		`}
+	${({ small }) =>
+		small &&
+		css`
+			height: 92px;
+			max-width: 157px;
+		`}
+`;
+
+export const BackgroundImage = styled.Image`
+	position: absolute;
+	right: -270px;
+	bottom: -150px;
 `;

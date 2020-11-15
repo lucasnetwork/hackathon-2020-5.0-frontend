@@ -1,7 +1,9 @@
 import React from 'react';
-import { MaterialIcons, Feather } from '@expo/vector-icons';
-
+import { Feather } from '@expo/vector-icons';
+import { Image } from 'react-native';
 import Container from './styles';
+
+import chatIcon from '../../images/chatIcon/chatIcon.png';
 
 const ButtonChat = ({ open, ...props }) => {
 	return (
@@ -9,7 +11,7 @@ const ButtonChat = ({ open, ...props }) => {
 			{open ? (
 				<Feather name="x" size={32} color="#fff" />
 			) : (
-				<MaterialIcons name="message" size={32} color="#fff" />
+				<Image source={chatIcon} />
 			)}
 		</Container>
 	);

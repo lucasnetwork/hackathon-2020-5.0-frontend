@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components/native';
+import { StyleSheet } from 'react-native';
 
 export default styled.View`
 	margin-left: 16px;
@@ -58,3 +59,17 @@ export const DateText = styled.Text`
 			font-weight: normal;
 		`}
 `;
+
+export const style = StyleSheet.create({
+	shadow: {
+		shadowColor: 'rgba(0,0,0,0.25)',
+		shadowOffset: {
+			width: 0,
+			height: 1,
+		},
+		shadowOpacity: 0.39,
+		shadowRadius: 8.3,
+
+		elevation: 13,
+	},
+});

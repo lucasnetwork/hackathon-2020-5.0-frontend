@@ -10,6 +10,13 @@ import Boleto from './pages/Boleto';
 import Header from './components/Header';
 import Home from './pages/Home';
 import ChatBot from './pages/ChatBot';
+import PayInvoice from './pages/PayInvoice';
+import IndicateFriend from './pages/IndicateFriend';
+import PayInvoiceDash from './pages/PayInvoiceDash';
+import Emergency from './pages/Emergency';
+import Alerts from './pages/Alerts';
+import CpflClub from './pages/CpflClub';
+import Record from './pages/Record';
 
 const Stack = createStackNavigator();
 
@@ -52,6 +59,41 @@ const Routes = () => (
 				name="ChatBot"
 				component={ChatBot}
 				options={{ header: (props) => <Header {...props} /> }}
+			/>
+			<Stack.Screen
+				name="PayInvoice"
+				component={PayInvoice}
+				options={{ header: (props) => <Header {...props} /> }}
+			/>
+			<Stack.Screen
+				name="IndicateFriend"
+				component={IndicateFriend}
+				options={{ header: (props) => <Header {...props} /> }}
+			/>
+			<Stack.Screen
+				name="PayInvoiceDash"
+				component={PayInvoiceDash}
+				options={{ headerShown: false }}
+			/>
+			<Stack.Screen
+				name="Emergency"
+				component={Emergency}
+				options={{ header: (props) => <Header {...props} /> }}
+			/>
+			<Stack.Screen
+				name="Alerts"
+				component={Alerts}
+				options={{ header: (props) => <Header {...props} /> }}
+			/>
+			<Stack.Screen
+				name="CpflClub"
+				component={CpflClub}
+				options={{ header: (props) => <Header {...props} /> }}
+			/>
+			<Stack.Screen
+				name="Record"
+				component={Record}
+				options={{ headerShown: false }}
 			/>
 		</Stack.Navigator>
 	</NavigationContainer>

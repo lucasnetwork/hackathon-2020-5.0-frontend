@@ -24,16 +24,12 @@ const Home = () => {
 		<Container>
 			<Background source={background} />
 			<Image source={logoImage} />
+			<Button onPress={goToRegisterPage} activeOpacity={0.6} text="Sou novo" />
 			<Button
 				onPress={goToLoginPage}
 				activeOpacity={0.6}
-				text="Já tenho conta"
-			/>
-			<Button
-				onPress={goToRegisterPage}
-				activeOpacity={0.6}
 				secondary
-				text="Sou novo"
+				text="Já tenho conta"
 			/>
 			<Button
 				onPress={goToQuickAcessPage}
