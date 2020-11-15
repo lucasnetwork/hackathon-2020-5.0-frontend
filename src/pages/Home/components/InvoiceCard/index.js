@@ -7,11 +7,12 @@ import Container, {
 	ContainerInvoiceRow,
 	DateContainer,
 	DateText,
+	style,
 } from './styles';
 
 const InvoiceCard = ({ price, points, state, dateVenc }) => {
 	return (
-		<Container>
+		<Container style={style.shadow}>
 			<Price>R$ {price}</Price>
 			<Points>+ {points} pontos</Points>
 			<ContainerInvoiceRow>
