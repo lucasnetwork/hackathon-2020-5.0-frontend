@@ -30,7 +30,8 @@ export default styled.TouchableOpacity`
 		small &&
 		css`
 			height: 92px;
-			max-width: 157px;
+			flex: 1;
+			margin-right: 16px;
 		`}
 `;
 

@@ -35,7 +35,7 @@ const Home = () => {
 				onPress={goToQuickAcessPage}
 				activeOpacity={0.6}
 				tertiary
-				text="2ª Via do Boleto"
+				text="Acesso rápido"
 			/>
 		</Container>
 	);

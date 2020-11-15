@@ -1,22 +1,26 @@
 import React from 'react';
-import Container, { ContainerTitle, ContainerButtons, TextOr } from './styles';
+import { useNavigation } from '@react-navigation/native';
+import Container, { ContainerTitle, ContainerInputs } from './styles';
 import Button from '../../components/Button';
 import InputText from '../../components/InputText';
 import { Title, SubTitle } from '../../components/Title';
 
 const PayInvoice = () => {
+	const navigate = useNavigation();
+	function goToPayInvoiceOptions() {
+		navigate.navigate('PayInvoiceOptions');
+	}
+
 	return (
 		<Container>
 			<ContainerTitle>
 				<Title>Pagar conta</Title>
-				<SubTitle>Digite seu código de barra</SubTitle>
 			</ContainerTitle>
-			<InputText label="Código de Barra" />
-			<ContainerButtons>
-				<Button text="Pagar conta" />
-				<TextOr>ou</TextOr>
-				<Button text="Usar leitor de código" />
-			</ContainerButtons>
+			<ContainerInputs>
+				<InputText label="CPF" />
+				<InputText label="Data de Nascimento" />
+			</ContainerInputs>
+			<Button text="Pagar Conta" onPress={goToPayInvoiceOptions} />
 		</Container>
 	);
 };
