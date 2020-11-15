@@ -5,13 +5,6 @@ import Container, {
 	Title,
 	TitleInvoice,
 	InvoiceList,
-	Invoice,
-	Price,
-	PointsInvoice,
-	ContainerInvoiceRow,
-	StateInvoice,
-	StateInvoiceText,
-	DateContainer,
 	DateText,
 	Card,
 	Containerclub,
@@ -22,6 +15,7 @@ import Container, {
 import InputSearch from '../../components/InputSearch';
 import giftBoxImage from '../../images/giftBox.png';
 import ButtonChat from '../../components/ButtonChat';
+import InvoiceCard from './components/InvoiceCard';
 
 const Home = () => {
 	return (
@@ -34,32 +28,18 @@ const Home = () => {
 			<InvoiceContainer>
 				<TitleInvoice>Suas Faturas</TitleInvoice>
 				<InvoiceList horizontal>
-					<Invoice>
-						<Price>343R$</Price>
-						<PointsInvoice>+21 pontos</PointsInvoice>
-						<ContainerInvoiceRow>
-							<StateInvoice>
-								<StateInvoiceText>Fatura Paga</StateInvoiceText>
-							</StateInvoice>
-							<DateContainer>
-								<DateText normal>Vencimento</DateText>
-								<DateText>08/10/2020</DateText>
-							</DateContainer>
-						</ContainerInvoiceRow>
-					</Invoice>
-					<Invoice>
-						<Price>343R$</Price>
-						<PointsInvoice>+21 pontos</PointsInvoice>
-						<ContainerInvoiceRow>
-							<StateInvoice waiting>
-								<StateInvoiceText>Aguardando Pagamento</StateInvoiceText>
-							</StateInvoice>
-							<DateContainer>
-								<DateText normal>Vencimento</DateText>
-								<DateText>08/10/2020</DateText>
-							</DateContainer>
-						</ContainerInvoiceRow>
-					</Invoice>
+					<InvoiceCard
+						price="343"
+						points="21"
+						state="paid"
+						dateVenc="08/10/2020"
+					/>
+					<InvoiceCard
+						price="343"
+						points="21"
+						state="wait"
+						dateVenc="08/10/2020"
+					/>
 				</InvoiceList>
 			</InvoiceContainer>
 			<Containerclub>
