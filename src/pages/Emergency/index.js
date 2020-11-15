@@ -1,12 +1,19 @@
 import React from 'react';
 import { View, Image } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 import Container, { ContainerTitle, ImageIcon } from './styles';
 import { Title, SubTitle } from '../../components/Title';
 import warning from '../../images/warning/warning.png';
 import Button from '../../components/Button';
 
 const Emergency = () => {
+	const navigate = useNavigation();
+
+	function goToAlerts() {
+		navigate.navigate('Alerts');
+	}
+
 	return (
 		<Container>
 			<ContainerTitle>
@@ -22,7 +29,7 @@ const Emergency = () => {
 				</ImageIcon>
 				<AntDesign name="arrowleft" size={24} color="#CD2A00" />
 			</View>
-			<Button tertiary text="Meus alertas" />
+			<Button onPress={goToAlerts} tertiary text="Meus alertas" />
 		</Container>
 	);
 };

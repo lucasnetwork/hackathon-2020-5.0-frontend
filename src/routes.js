@@ -14,6 +14,7 @@ import PayInvoice from './pages/PayInvoice';
 import IndicateFriend from './pages/IndicateFriend';
 import PayInvoiceDash from './pages/PayInvoiceDash';
 import Emergency from './pages/Emergency';
+import Alerts from './pages/Alerts';
 
 const Stack = createStackNavigator();
 
@@ -75,6 +76,11 @@ const Routes = () => (
 			<Stack.Screen
 				name="Emergency"
 				component={Emergency}
+				options={{ header: (props) => <Header {...props} /> }}
+			/>
+			<Stack.Screen
+				name="Alerts"
+				component={Alerts}
 				options={{ header: (props) => <Header {...props} /> }}
 			/>
 		</Stack.Navigator>
