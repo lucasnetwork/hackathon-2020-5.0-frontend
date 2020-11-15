@@ -11,6 +11,8 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import ChatBot from './pages/ChatBot';
 import PayInvoice from './pages/PayInvoice';
+import IndicateFriend from './pages/IndicateFriend';
+import PayInvoiceDash from './pages/PayInvoiceDash';
 
 const Stack = createStackNavigator();
 
@@ -58,6 +60,16 @@ const Routes = () => (
 				name="PayInvoice"
 				component={PayInvoice}
 				options={{ header: (props) => <Header {...props} /> }}
+			/>
+			<Stack.Screen
+				name="IndicateFriend"
+				component={IndicateFriend}
+				options={{ header: (props) => <Header {...props} /> }}
+			/>
+			<Stack.Screen
+				name="PayInvoiceDash"
+				component={PayInvoiceDash}
+				options={{ headerShown: false }}
 			/>
 		</Stack.Navigator>
 	</NavigationContainer>

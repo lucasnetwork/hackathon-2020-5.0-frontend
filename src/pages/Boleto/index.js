@@ -1,5 +1,4 @@
 import React from 'react';
-import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import Button from '../../components/Button';
@@ -16,6 +15,10 @@ import InputText from '../../components/InputText';
 const Boleto = () => {
 	const navigate = useNavigation();
 
+	function goToPayInvoiceDash() {
+		navigate.navigate('PayInvoiceDash');
+	}
+
 	return (
 		<Container>
 			<TitleContainer>
@@ -29,7 +32,7 @@ const Boleto = () => {
 				<InputText label="Data de Nascimento" />
 			</ContainerInputs>
 			<ContainerButton>
-				<Button text="Gerar boleto" />
+				<Button text="Gerar boleto" onPress={goToPayInvoiceDash} />
 			</ContainerButton>
 		</Container>
 	);
