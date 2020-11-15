@@ -16,10 +16,6 @@ export const Title = styled.Text`
 	font-weight: bold;
 `;
 
-export const InvoiceContainer = styled.View`
-	padding: 0 16px;
-`;
-
 export const TitleInvoice = styled.Text`
 	font-size: 16px;
 	font-weight: bold;
@@ -35,7 +31,7 @@ export const TitleClub = styled.Text`
 	margin-bottom: 12px;
 `;
 
-export const Containerclub = styled.View`
+export const ContainerGroup = styled.View`
 	padding: 0 16px;
 	width: 100%;
 	margin-bottom: 16px;
@@ -61,4 +57,10 @@ export const TextCard = styled.Text`
 		css`
 			color: #0098d1;
 		`}
+`;
+
+export const TextService = styled.Text`
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
 `;

@@ -1,15 +1,15 @@
 import React from 'react';
-import { Image, View, ScrollView } from 'react-native';
+import { Image, View, ScrollView, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import Container, {
 	TitleContainer,
 	Title,
 	TitleInvoice,
-	Containerclub,
-	InvoiceContainer,
+	ContainerGroup,
 	TextCard,
 	TitleClub,
+	TextService,
 } from './styles';
 import InputSearch from '../../components/InputSearch';
 import giftBoxImage from '../../images/giftBox.png';
@@ -17,6 +17,7 @@ import handShakeImage from '../../images/handShake/handshake.png';
 import ButtonChat from '../../components/ButtonChat';
 import InvoiceCard from './components/InvoiceCard';
 import Card from '../../components/Card';
+import ButtonCard from '../../components/ButtonCard';
 
 const Home = () => {
 	const navigate = useNavigation();
@@ -41,9 +42,12 @@ const Home = () => {
 						<Title>Olá, Carlos!</Title>
 						<InputSearch />
 					</TitleContainer>
-					<InvoiceContainer>
+					<ContainerGroup>
 						<TitleInvoice>Suas Faturas</TitleInvoice>
-						<ScrollView contentContainerStyle={{ padding: 16 }} horizontal>
+						<ScrollView
+							contentContainerStyle={{ paddingVertical: 16 }}
+							horizontal
+						>
 							<InvoiceCard
 								price="343"
 								points="21"
@@ -57,8 +61,8 @@ const Home = () => {
 								dateVenc="08/10/2020"
 							/>
 						</ScrollView>
-					</InvoiceContainer>
-					<Containerclub>
+					</ContainerGroup>
+					<ContainerGroup>
 						<TitleClub>CPFL Clube</TitleClub>
 						<Card onPress={goToCpflClub}>
 							<Image source={giftBoxImage} />
@@ -72,8 +76,32 @@ const Home = () => {
 								color="#3F3F3F"
 							/>
 						</Card>
-					</Containerclub>
-					<Containerclub>
+					</ContainerGroup>
+
+					<ContainerGroup>
+						<TitleClub>Nossos Serviços</TitleClub>
+						<View
+							style={{ flexDirection: 'row', justifyContent: 'space-between' }}
+						>
+							<ButtonCard small>
+								<TextService>2ª via do boleto</TextService>
+							</ButtonCard>
+							<ButtonCard small tertiary>
+								<TextService>Falta de energia</TextService>
+							</ButtonCard>
+						</View>
+						<View
+							style={{ flexDirection: 'row', justifyContent: 'space-between' }}
+						>
+							<ButtonCard small secondary>
+								<TextService>Desligar energia</TextService>
+							</ButtonCard>
+							<ButtonCard small fourth>
+								<TextService>Religar energia</TextService>
+							</ButtonCard>
+						</View>
+					</ContainerGroup>
+					<ContainerGroup>
 						<TitleClub>Ganhe pontos</TitleClub>
 						<Card secondary onPress={goToIndicateFriend}>
 							<Image source={handShakeImage} />
@@ -85,7 +113,7 @@ const Home = () => {
 							</View>
 							<Ionicons name="md-arrow-round-forward" size={30} color="#fff" />
 						</Card>
-					</Containerclub>
+					</ContainerGroup>
 				</View>
 			</Container>
 		</>
