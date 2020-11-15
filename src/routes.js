@@ -9,6 +9,7 @@ import QuickAcess from './pages/QuickAcess';
 import Boleto from './pages/Boleto';
 import Header from './components/Header';
 import Home from './pages/Home';
+import ChatBot from './pages/ChatBot';
 
 const Stack = createStackNavigator();
 
@@ -45,6 +46,11 @@ const Routes = () => (
 			<Stack.Screen
 				name="Home"
 				component={Home}
+				options={{ header: (props) => <Header {...props} /> }}
+			/>
+			<Stack.Screen
+				name="ChatBot"
+				component={ChatBot}
 				options={{ header: (props) => <Header {...props} /> }}
 			/>
 		</Stack.Navigator>

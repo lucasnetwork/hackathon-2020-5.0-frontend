@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import Container, {
 	TitleContainer,
 	Title,
@@ -18,9 +19,14 @@ import ButtonChat from '../../components/ButtonChat';
 import InvoiceCard from './components/InvoiceCard';
 
 const Home = () => {
+	const navigate = useNavigation();
+
+	function goToChatBot() {
+		navigate.navigate('ChatBot');
+	}
 	return (
 		<Container>
-			<ButtonChat />
+			<ButtonChat onPress={goToChatBot} />
 			<TitleContainer>
 				<Title>Olá, Carlos!</Title>
 				<InputSearch />

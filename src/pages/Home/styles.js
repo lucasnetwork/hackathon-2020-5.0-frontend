@@ -5,8 +5,7 @@ export default styled.View`
 	padding: 16px;
 	align-items: center;
 	justify-content: center;
-	background: #f5f5f5;
-	margin-top: 50px;
+	padding-top: 50px;
 `;
 
 export const TitleContainer = styled.View`
