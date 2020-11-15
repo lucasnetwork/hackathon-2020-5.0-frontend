@@ -20,12 +20,12 @@ export default styled.TouchableOpacity`
 
 export const style = StyleSheet.create({
 	shadow: {
-		shadowColor: '#000',
+		shadowColor: 'rgba(0,0,0,0.25)',
 		shadowOffset: {
 			width: 0,
-			height: 6,
+			height: 1,
 		},
-		shadowOpacity: 0.25,
+		shadowOpacity: 0.39,
 		shadowRadius: 8.3,
 
 		elevation: 13,
