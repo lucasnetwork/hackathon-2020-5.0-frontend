@@ -1,12 +1,11 @@
 import React from 'react';
-import { Image, View } from 'react-native';
+import { Image, View, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import Container, {
 	TitleContainer,
 	Title,
 	TitleInvoice,
-	InvoiceList,
 	Containerclub,
 	InvoiceContainer,
 	TextCard,
@@ -29,6 +28,10 @@ const Home = () => {
 		navigate.navigate('IndicateFriend');
 	}
 
+	function goToCpflClub() {
+		navigate.navigate('CpflClub');
+	}
+
 	return (
 		<>
 			<ButtonChat onPress={goToChatBot} />
@@ -40,7 +43,7 @@ const Home = () => {
 					</TitleContainer>
 					<InvoiceContainer>
 						<TitleInvoice>Suas Faturas</TitleInvoice>
-						<InvoiceList horizontal>
+						<ScrollView contentContainerStyle={{ padding: 16 }} horizontal>
 							<InvoiceCard
 								price="343"
 								points="21"
@@ -53,11 +56,11 @@ const Home = () => {
 								state="wait"
 								dateVenc="08/10/2020"
 							/>
-						</InvoiceList>
+						</ScrollView>
 					</InvoiceContainer>
 					<Containerclub>
 						<TitleClub>CPFL Clube</TitleClub>
-						<Card>
+						<Card onPress={goToCpflClub}>
 							<Image source={giftBoxImage} />
 							<View>
 								<TextCard small>Saldo total</TextCard>

@@ -27,11 +27,6 @@ export const TitleInvoice = styled.Text`
 	margin-bottom: 8px;
 `;
 
-export const InvoiceList = styled.ScrollView`
-	height: 160px;
-	margin-bottom: 36px;
-`;
-
 export const TitleClub = styled.Text`
 	font-size: 16px;
 	font-weight: bold;

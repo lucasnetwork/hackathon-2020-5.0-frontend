@@ -15,6 +15,7 @@ import IndicateFriend from './pages/IndicateFriend';
 import PayInvoiceDash from './pages/PayInvoiceDash';
 import Emergency from './pages/Emergency';
 import Alerts from './pages/Alerts';
+import CpflClub from './pages/CpflClub';
 
 const Stack = createStackNavigator();
 
@@ -81,6 +82,11 @@ const Routes = () => (
 			<Stack.Screen
 				name="Alerts"
 				component={Alerts}
+				options={{ header: (props) => <Header {...props} /> }}
+			/>
+			<Stack.Screen
+				name="CpflClub"
+				component={CpflClub}
 				options={{ header: (props) => <Header {...props} /> }}
 			/>
 		</Stack.Navigator>
