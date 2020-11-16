@@ -17,12 +17,22 @@ import Container, {
 
 import logoImage from '../../images/logo.png';
 import InputText from '../../components/InputText';
+import services from '../../services';
 
 const Login = () => {
 	const navigate = useNavigation();
+	const [email, setEmail] = React.useState('admin@email.com');
+	const [password, setPassword] = React.useState('123456');
 
-	function goToHome() {
-		navigate.navigate('Home');
+	async function goToHome() {
+		const response = await services.post.authenticate({
+			email,
+			password,
+		});
+
+		if (response.status == 200) {
+			navigate.navigate('Home');
+		}
 	}
 
 	return (
@@ -35,8 +45,17 @@ const Login = () => {
 				</TitleContainer>
 			</View>
 			<ContainerInputs>
-				<InputText label="E-mail" value="admin@email.com" />
-				<InputText label="Senha" password value="123456" />
+				<InputText
+					label="E-mail"
+					value={email}
+					onChangeText={(e) => setEmail(e)}
+				/>
+				<InputText
+					label="Senha"
+					password
+					value={password}
+					onChangeText={(e) => setPassword(e)}
+				/>
 			</ContainerInputs>
 			<ContainerButton>
 				<ContainerTextReceiverPass>

@@ -61,6 +61,12 @@ export default {
 		},
 	},
 	post: {
+		authenticate(params) {
+			return api
+				.post('/authenticate', params)
+				.then((response) => response)
+				.catch((error) => error);
+		},
 		users(params) {
 			return api
 				.post('/users', params)
