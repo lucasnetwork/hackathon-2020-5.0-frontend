@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components/native';
 
 export default styled.ScrollView`
 	flex: 1;
-	padding-top: 50px;
+	padding-top: 20px;
 `;
 
 export const TitleContainer = styled.View`
@@ -63,4 +63,14 @@ export const TextService = styled.Text`
 	font-size: 20px;
 	color: #fff;
 	text-transform: uppercase;
+	${({ small }) =>
+		small &&
+		css`
+			font-size: 12px;
+		`}
+`;
+
+export const ContainerButton = styled.View`
+	padding: 0 16px;
+	margin-bottom: 20px;
 `;
