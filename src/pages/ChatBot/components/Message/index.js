@@ -9,7 +9,7 @@ import Container, {
 	ImageContainer,
 } from './styles';
 
-const Message = () => {
+const Message = ({ title, description, createdAt }) => {
 	return (
 		<Container>
 			<ImageContainer>
@@ -17,13 +17,10 @@ const Message = () => {
 			</ImageContainer>
 			<View>
 				<TitleContainer>
-					<Title>Chatbot Name</Title>
-					<SubTitle>10/10/2020 às 10:33</SubTitle>
+					<Title>{title}</Title>
+					<SubTitle>{createdAt} às 10:33</SubTitle>
 				</TitleContainer>
-				<MessageText>
-					Reprehenderit posuere rerum aliquip possimus aptent alias quos sint
-					nisl morbi autem. Sequi luctus sapien ultricies! Duis.
-				</MessageText>
+				<MessageText>{description}</MessageText>
 			</View>
 		</Container>
 	);

@@ -3,6 +3,7 @@ import styled from 'styled-components/native';
 export default styled.View`
 	height: auto;
 	flex-direction: row;
+	margin-bottom: 20px;
 `;
 
 export const TitleContainer = styled.View`
