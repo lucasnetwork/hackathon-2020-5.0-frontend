@@ -10,6 +10,7 @@ import Container, {
 	TextCard,
 	TitleClub,
 	TextService,
+	ContainerButton,
 } from './styles';
 import InputSearch from '../../components/InputSearch';
 import giftBoxImage from '../../images/giftBox.png';
@@ -18,6 +19,7 @@ import ButtonChat from '../../components/ButtonChat';
 import InvoiceCard from './components/InvoiceCard';
 import Card from '../../components/Card';
 import ButtonCard from '../../components/ButtonCard';
+import storm from '../../images/storm/storm.png';
 
 const Home = () => {
 	const navigate = useNavigation();
@@ -37,6 +39,23 @@ const Home = () => {
 		<>
 			<ButtonChat onPress={goToChatBot} />
 			<Container>
+				<ContainerButton>
+					<ButtonCard>
+						<View
+							style={{ flexDirection: 'row', justifyContent: 'space-between' }}
+						>
+							<View>
+								<TextService>Quinta</TextService>
+								<TextService small>12/11/2020</TextService>
+							</View>
+							<Image source={storm} />
+							<View style={{ alignItems: 'center' }}>
+								<TextService>18°</TextService>
+								<TextService small>São Paulo</TextService>
+							</View>
+						</View>
+					</ButtonCard>
+				</ContainerButton>
 				<View style={{ flex: 1, paddingBottom: 32 }}>
 					<TitleContainer>
 						<Title>Olá, Carlos!</Title>
