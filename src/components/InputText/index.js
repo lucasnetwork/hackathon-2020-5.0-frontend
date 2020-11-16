@@ -5,7 +5,7 @@ import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Container, { Label, Input, ContainerInput } from './styles';
 
-const InputText = ({ label, type, password }) => {
+const InputText = ({ label, type, password, value }) => {
 	const [passwordVisible, setPasswordVisible] = useState(false);
 	useEffect(() => {
 		if (password) {
@@ -16,7 +16,11 @@ const InputText = ({ label, type, password }) => {
 		<Container>
 			<Label>{label}</Label>
 			<ContainerInput>
-				<Input keyboardType={type} secureTextEntry={passwordVisible} />
+				<Input
+					keyboardType={type}
+					value={value}
+					secureTextEntry={passwordVisible}
+				/>
 				{password && (
 					<TouchableOpacity
 						onPress={() => setPasswordVisible(!passwordVisible)}

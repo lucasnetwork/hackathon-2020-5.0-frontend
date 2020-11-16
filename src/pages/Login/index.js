@@ -35,8 +35,8 @@ const Login = () => {
 				</TitleContainer>
 			</View>
 			<ContainerInputs>
-				<InputText label="E-mail" />
-				<InputText label="Senha" password />
+				<InputText label="E-mail" value="admin@email.com" />
+				<InputText label="Senha" password value="123456" />
 			</ContainerInputs>
 			<ContainerButton>
 				<ContainerTextReceiverPass>
