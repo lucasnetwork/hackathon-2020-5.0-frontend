@@ -22,8 +22,9 @@ const ChatBot = () => {
 		<Container>
 			<MessageContainer>
 				<ScrollView>
-					{messages.map(({ title, description, created_at }) => (
+					{messages.map(({ title, description, created_at }, index) => (
 						<Message
+							key={index}
 							title={title}
 							description={description}
 							createdAt={created_at}
